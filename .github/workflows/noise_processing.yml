@@ -7,9 +7,10 @@ on:
     branches:
      - main
      - caching
+#     - tutorial
   
-  # schedule:
-  #  - cron: '9 * * * *'
+   schedule:
+    - cron: '23 21 * * *'
     
 jobs:
   process:
