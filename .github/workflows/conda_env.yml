@@ -1,8 +1,8 @@
 name: Conda Environment
 
 on:
-  # To run manually
-  workflow_dispatch
+  # Automatically run upon pushes
+  push
 
 jobs:
   setup:
@@ -18,7 +18,7 @@ jobs:
       - name: Install conda packages
         shell: pwsh
         run: |
-          conda install scipy metpy zarr
+          conda install scipy metpy zarr myst-nb
 
       - name: Hello World 
         shell: pwsh
