@@ -9,7 +9,7 @@ on:
      - caching
   
   schedule:
-    - cron: '23 21 * * *'
+    - cron: '50 21 * * *'
     
 jobs:
   process:

@@ -14,8 +14,13 @@ from orcasound_noise.pipeline.acoustic_util import plot_spec, plot_bb
 
 # Set Location and Resolution
 # Port Townsend, 1 Hz Frequency, 60-second samples
+# Options are
+#Port Townsend: PORT_TOWNSEND
+#Bush Point: BUSH_POINT
+#Sunsent Bay: SUNSET_BAY
+#Orcasound Lab: ORCASOUND_LAB
 if __name__ == '__main__':
-    pipeline = NoiseAnalysisPipeline(Hydrophone.ORCASOUND_LAB,
+    pipeline = NoiseAnalysisPipeline(Hydrophone.BUSH_POINT,
                                      delta_f=10, bands=None,
                                      delta_t=60, mode='safe')
 
@@ -25,8 +30,8 @@ if __name__ == '__main__':
 # Generate parquet dataframes with noise levels for a time period
 
 now = dt.datetime.now(pytz.timezone('US/Pacific'))
-psd_path, broadband_path = pipeline.generate_parquet_file(now - dt.timedelta(hours = 9), 
-                                                          now - dt.timedelta(hours = 8), 
+psd_path, broadband_path = pipeline.generate_parquet_file(now - dt.timedelta(hours = 12), 
+                                                          now - dt.timedelta(hours = 10), 
                                                           upload_to_s3=False)
 
 # Read the parquet files
