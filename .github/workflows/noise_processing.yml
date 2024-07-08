@@ -8,7 +8,7 @@ on:
      - main
      - caching
   
-   schedule:
+  schedule:
     - cron: '23 21 * * *'
     
 jobs:
