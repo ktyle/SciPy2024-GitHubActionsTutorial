@@ -13,12 +13,12 @@ jobs:
           miniconda-version: "latest"
           channels: conda-forge, defaults
           activate-environment: scipy
-          python-version: 3.9
+          python-version: 3.12
 
       - name: Install conda packages
         shell: pwsh
         run: |
-          conda install scipy
+          conda install scipy metpy zarr
 
       - name: Hello World 
         shell: pwsh
