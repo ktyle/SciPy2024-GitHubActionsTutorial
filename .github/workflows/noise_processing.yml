@@ -9,9 +9,7 @@ on:
      - caching
   
   schedule:
-    - cron: '11 22 * * *'
-    branches:
-    - tutorial
+    - cron: '20 22 * * *'
     
 jobs:
   process:
