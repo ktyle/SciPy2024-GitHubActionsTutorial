@@ -8,8 +8,8 @@ on:
      - main
      - caching
   
-  # schedule:
-  #  - cron: '9 * * * *'
+  schedule:
+    - cron: '00 00 * * *'
     
 jobs:
   process:
